@@ -20,6 +20,7 @@ namespace CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Read
                 Name = x.Name,
                 Description = x.Description,
                 Price = x.Price,
+                CategoryName = x.Category.Name,
             }).ToList();
             return values;
         }
