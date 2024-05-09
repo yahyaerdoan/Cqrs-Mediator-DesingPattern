@@ -19,4 +19,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CQRS\Handlers\Category\Read\" />
+    <Folder Include="CQRS\Handlers\Product\Read\" />
+    <Folder Include="CQRS\Handlers\Product\Write\" />
+  </ItemGroup>
+
 </Project>
