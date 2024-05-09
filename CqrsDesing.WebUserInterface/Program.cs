@@ -1,6 +1,13 @@
+using CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Read;
+using CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Read;
+using CqrsDesing.WebUserInterface.CqrsDesing.DataAccessLayer.Contetx;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<CqrsDesingDb>();
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+builder.Services.AddScoped<GetProductQueryHandler>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

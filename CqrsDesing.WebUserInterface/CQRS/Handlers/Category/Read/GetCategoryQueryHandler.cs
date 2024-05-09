@@ -2,7 +2,7 @@
 using CqrsDesing.WebUserInterface.CqrsDesing.DataAccessLayer.Contetx;
 using Microsoft.EntityFrameworkCore;
 
-namespace CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Write
+namespace CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Read
 {
     public class GetCategoryQueryHandler
     {
