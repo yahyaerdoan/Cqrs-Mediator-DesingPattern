@@ -1,5 +1,7 @@
 using CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Read;
+using CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Write;
 using CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Read;
+using CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Write;
 using CqrsDesing.WebUserInterface.CqrsDesing.DataAccessLayer.Contetx;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CqrsDesingDb>();
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetProductQueryHandler>();
+
+builder.Services.AddScoped<CreateCategoryCommandHandler>();
+builder.Services.AddScoped<DeleteCategoryCommandHandler>();
+
+builder.Services.AddScoped<CreateProductCommandHandler>();
+builder.Services.AddScoped<DeleteProductCommandHandler>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

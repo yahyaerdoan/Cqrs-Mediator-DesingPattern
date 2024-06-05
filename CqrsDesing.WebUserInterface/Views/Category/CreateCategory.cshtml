@@ -1,0 +1,20 @@
+﻿
+@model CreateCategoryCommand
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <label>Category Name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <label>Descriptions</label>
+        <input type="text" asp-for="Description" class="form-control" />
+        <button class="btn btn-primary">Create new category</button>
+    </div>
+</form>

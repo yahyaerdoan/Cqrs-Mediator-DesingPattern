@@ -21,9 +21,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CQRS\Handlers\Category\Write\" />
-    <Folder Include="CQRS\Handlers\Product\Write\" />
-  </ItemGroup>
-
 </Project>
