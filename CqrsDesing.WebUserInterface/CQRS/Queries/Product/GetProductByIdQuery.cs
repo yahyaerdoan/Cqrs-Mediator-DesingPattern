@@ -4,5 +4,9 @@
     {
         public int ProductId { get; set; }
 
+        public GetProductByIdQuery(int productId)
+        {
+            ProductId = productId;
+        }
     }
 }

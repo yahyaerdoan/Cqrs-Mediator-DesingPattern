@@ -13,9 +13,13 @@ builder.Services.AddScoped<GetProductQueryHandler>();
 
 builder.Services.AddScoped<CreateCategoryCommandHandler>();
 builder.Services.AddScoped<DeleteCategoryCommandHandler>();
+builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
 
 builder.Services.AddScoped<CreateProductCommandHandler>();
 builder.Services.AddScoped<DeleteProductCommandHandler>();
+builder.Services.AddScoped<UpdateProductCommandHandler>();
+builder.Services.AddScoped<GetProductByIdQueryHandler>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
