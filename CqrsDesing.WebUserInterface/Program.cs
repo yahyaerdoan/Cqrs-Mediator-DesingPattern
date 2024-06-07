@@ -3,6 +3,7 @@ using CqrsDesing.WebUserInterface.CQRS.Handlers.Category.Write;
 using CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Read;
 using CqrsDesing.WebUserInterface.CQRS.Handlers.Product.Write;
 using CqrsDesing.WebUserInterface.CqrsDesing.DataAccessLayer.Contetx;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,10 @@ builder.Services.AddScoped<CreateProductCommandHandler>();
 builder.Services.AddScoped<DeleteProductCommandHandler>();
 builder.Services.AddScoped<UpdateProductCommandHandler>();
 builder.Services.AddScoped<GetProductByIdQueryHandler>();
+
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

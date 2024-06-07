@@ -12,5 +12,6 @@ namespace CqrsDesing.WebUserInterface.CqrsDesing.DataAccessLayer.Contetx
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
